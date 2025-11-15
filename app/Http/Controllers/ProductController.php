@@ -33,23 +33,6 @@ class ProductController extends Controller
 
     public function postProductStore(Request $request)
     {
-        // $request->validate([
-        //     'product_id' => 'required|string|max:50|unique:products,product_id',
-        //     'name' => 'required|string|max:50',
-        //     'price' => 'required|numeric|min:0',
-        // ]);
-        
-
-        // DB::table('products')->insert([
-        //     'product_id' => $request->input('product_id'),
-        //     'name' => $request->input('name'),
-        //     'description' => $request->input('description'),
-        //     'price' => $request->input('price'),
-        //     'stock' => $request->input('stock'),
-        //     'image' => $request->file('image') ? $request->file('image')->store('products_images', 'public') : null,
-        //     //'image' => $imagePath,
-        // ]);
-
         $product_id = $request->product_id;
         $imagePath = null;
         $name = $request->name;

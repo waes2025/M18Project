@@ -6,6 +6,8 @@
 
         @if(session('success'))
             <div class="alert alert-success">{{session('success')}}</div>
+        @elseif(session('error'))
+            <div class="alert alert-danger">{{session('error')}}</div>
         @endif
         
         <a href="{{ route('products.create') }}" class="btn btn-success">Add Product</a>
